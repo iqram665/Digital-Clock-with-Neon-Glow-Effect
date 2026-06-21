@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0b0f19; /* Screenshot background color */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace; /* To give a digital vibe */
+    overflow: hidden;
+}
+
+/* Glassmorphism and neon border containers */
+.clock-container {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid #00f2fe; /* niyon glow border*/
+    box-shadow: 0 0 20px #00f2fe, inset 0 0 15px rgba(0, 242, 254, 0.2);
+}
+
+.clock {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* niyon text effect */
+.clock span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #4facfe;
+    text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe, 0 0 40px #4facfe;
+}
+
+/* niyon colon animation */
+.colon {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+}
